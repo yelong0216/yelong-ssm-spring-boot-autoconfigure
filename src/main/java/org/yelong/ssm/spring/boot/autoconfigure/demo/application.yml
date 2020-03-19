@@ -1,0 +1,26 @@
+server:
+ port: 12533
+spring:
+ application:
+  name: yelong-ssm-boot-test
+yelong:
+ ssm:
+  configLocations: oracle-model-configuration.properties,mysql-model-configuration.properties
+  multiDataSource: true
+pagehelper:
+ autoRuntimeDialect: true
+management:
+ endpoints:
+   web:
+    exposure:
+     include: "*"
+ endpoint:
+  health:
+   show-details: ALWAYS
+#开启logging myabtis语句打印
+logging:
+ level:
+  main.blog.mapper: trace
+mybatis:
+ configuration:
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
