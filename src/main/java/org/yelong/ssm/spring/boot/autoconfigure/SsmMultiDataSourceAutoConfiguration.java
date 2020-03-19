@@ -26,9 +26,7 @@ import org.yelong.ssm.SsmConfiguration;
  * 
  * 使用pageHepler分页时，请将pagehelper.autoRuntimeDialect设置为true。用来区分数据库方言
  * 
- * @author pengfei<yl1430834495@163.com>
- * @date 2019年11月6日下午4:59:38
- * @version 1.2
+ * @author PengFei
  */
 @Configuration
 @ConditionalOnBean(MybatisAutoConfiguration.class)

@@ -17,9 +17,7 @@ import org.yelong.ssm.spring.boot.autoconfigure.DataSourceBuilderUtils;
 
 /**
  * 主数据源配置
- * @author pengfei<yl1430834495@163.com>
- * @date 2019年11月6日下午3:00:07
- * @version 1.2
+ * @author PengFei
  */
 //@Configuration
 @MapperScan(basePackages = "org.yl.ssm.boot.test.primary")

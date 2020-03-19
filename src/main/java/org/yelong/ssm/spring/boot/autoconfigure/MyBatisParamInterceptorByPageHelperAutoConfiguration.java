@@ -21,9 +21,7 @@ import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
  * 添加mybatis参数拦截器。
  * 该对象只有在使用分页插件时才会注入。
  * mybatis参数拦截器必须在分页拦截器之前执行
- * @author 彭飞
- * @date 2019年9月5日下午2:30:32
- * @version 1.2
+ * @author PengFei
  */
 @Configuration
 @ConditionalOnBean(PageHelperAutoConfiguration.class)
@@ -35,7 +33,6 @@ public class MyBatisParamInterceptorByPageHelperAutoConfiguration {
 
 	@PostConstruct
 	public void addMyBaticParamInterceptor() {
-		//System.out.println("--------------执行了添加拦截器ByPageHelper");
 		sqlSessionFactoryList.forEach(x->{
 			try {
 				MyBatisInterceptorSortUtils.sortInterceptor(x.getConfiguration(),( (y,z) -> {

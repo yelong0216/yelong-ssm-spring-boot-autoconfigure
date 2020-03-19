@@ -24,9 +24,7 @@ import org.yelong.ssm.SsmModelProperties;
  * 
  * 单数据源中通过默认的配置进行初始化配置model的bean。
  * modelbean的默认配置详见{@link SsmModelProperties}
- * @author pengfei<yl1430834495@163.com>
- * @date 2019年11月6日下午5:00:05
- * @version 1.2
+ * @author PengFei
  */
 @Configuration
 @ConditionalOnBean(MybatisAutoConfiguration.class)
@@ -67,7 +65,6 @@ public class SsmSingleDataSourceAutoConfiguration implements ApplicationContextA
 		if( null != jdbcUrl && null == databaseDialect ) {
 			databaseDialect = getDatabaseDialect(jdbcUrl);
 		}
-
 	}
 
 	private String getDatabaseDialect(String jdbcUrl) {
@@ -78,4 +75,5 @@ public class SsmSingleDataSourceAutoConfiguration implements ApplicationContextA
 		}
 		return null;
 	}
+	
 }

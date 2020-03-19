@@ -12,9 +12,7 @@ import org.yelong.support.properties.wired.PropertiesWiredProcessorBuilder;
 
 /**
  * 读取自定义的配置创建DataSource
- * @author pengfei<yl1430834495@163.com>
- * @date 2019年11月6日下午4:18:03
- * @version 1.2
+ * @author PengFei
  */
 public class DataSourceBuilderUtils {
 
@@ -22,10 +20,8 @@ public class DataSourceBuilderUtils {
 	
 	/**
 	 * 根据配置中的属性创建
-	 * @date 2019年11月6日下午4:19:27
-	 * @version 1.2
 	 * @param <D>
-	 * @return
+	 * @return {@link DataSource}
 	 */
 	@SuppressWarnings("unchecked")
 	public static <D extends DataSource>  D createDataSourceBuilder(String configLocation) throws Exception{

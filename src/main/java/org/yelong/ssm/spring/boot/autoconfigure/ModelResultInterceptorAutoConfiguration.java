@@ -18,9 +18,7 @@ import org.springframework.context.annotation.Configuration;
 import org.yelong.support.orm.mybaits.interceptor.ModelResultSetHandlerInteceptor;
 
 /**
- * @author 彭飞
- * @date 2019年10月29日下午2:38:18
- * @version 1.2
+ * @author PengFei
  */
 @Configuration
 @ConditionalOnBean(SqlSessionFactory.class)
@@ -35,11 +33,6 @@ public class ModelResultInterceptorAutoConfiguration {
 		ModelResultSetHandlerInteceptor interceptor = new ModelResultSetHandlerInteceptor();
 		sqlSessionFactoryList.forEach( x -> {
 			List<Interceptor> interceptors = x.getConfiguration().getInterceptors();
-			//			if(!CollectionUtils.exists(interceptors, y->{
-			//				return y instanceof ModelResultSetHandlerInteceptor;
-			//			})) {
-			//				x.getConfiguration().addInterceptor(interceptor);
-			//			}
 			if(!IterableUtils.matchesAny(interceptors, y->{
 				return y instanceof ModelResultSetHandlerInteceptor;
 			})) {

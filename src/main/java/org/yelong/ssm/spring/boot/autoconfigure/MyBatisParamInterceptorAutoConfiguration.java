@@ -21,9 +21,7 @@ import com.github.pagehelper.autoconfigure.PageHelperAutoConfiguration;
 /**
  * 添加mybatis参数拦截器<br/>
  * 该类在存在分页插件时不进行注入
- * @author 彭飞
- * @date 2019年9月5日下午2:28:44
- * @version 1.2
+ * @author PengFei
  */
 @Configuration
 @ConditionalOnBean(SqlSessionFactory.class)
@@ -39,6 +37,5 @@ public class MyBatisParamInterceptorAutoConfiguration {
 		MyBatisPlaceholderMapInterceptor interceptor = new MyBatisPlaceholderMapInterceptor();
 		sqlSessionFactoryList.forEach( x -> x.getConfiguration().addInterceptor(interceptor) );
 	}
-	
 	
 }

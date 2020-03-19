@@ -17,6 +17,4 @@ public class SsmBootModelProperties extends SsmModelProperties{
 
 	public static final String SSM_PREFIX = "yelong.ssm";
 	
-	
-	
 }
